@@ -1,0 +1,39 @@
+﻿@model IEnumerable<REMS.Models.BidModel>
+
+@{
+    ViewData["Title"] = "Index";    
+}
+<body style="background: url('https://a0.anyrgb.com/pngimg/628/1762/real-estate-publicity-background-meeting-background-panel-background-promotional-panels-dazzle-light-starry-sky-effect-elements-passion-starlight-atmosphere-of-earth.png') no-repeat center center; background-size: cover; height: 100%; width: 100%;">
+
+<h1>Your Bids</h1>
+
+<table class="table table-hover table-danger border-4">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.propname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>            
+            <td>
+                @Html.DisplayFor(modelItem => item.propname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bid)
+            </td>
+            <td>               
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>

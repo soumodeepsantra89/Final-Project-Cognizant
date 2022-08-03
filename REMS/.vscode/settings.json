@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ae9bd9d7-d708-4802-a2d0-f26f562a23ec/microsoft.web/sites/subscriptions/ae9bd9d7-d708-4802-a2d0-f26f562a23ec/resourceGroups/ProjectFinal/providers/Microsoft.Web/sites/RealEstateFrontend",
+    "appService.deploySubpath": "angularapps\\dist\\angularapps"
+}
